@@ -1,0 +1,13 @@
+name: NoRegenAndHungerPlugin
+version: '1.0'
+main: com.timedust.noRegenAndHungerPlugin.NoRegenAndHungerPlugin
+api-version: '1.21'
+
+commands:
+  noregenandhungerplugin:
+    description: "Reload plugin config"
+
+permissions:
+  noregenandhungerplugin.reload:
+    description: "Позволяет перезагружать конфиг плагина"
+    default: op
