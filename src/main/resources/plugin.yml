@@ -1,7 +1,7 @@
 name: NoRegenAndHungerPlugin
 version: '1.0'
 main: com.timedust.noRegenAndHungerPlugin.NoRegenAndHungerPlugin
-api-version: '1.21'
+api-version: '1.16'
 
 commands:
   noregenandhungerplugin:

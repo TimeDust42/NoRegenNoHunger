@@ -17,7 +17,9 @@ public class FoodLevelChangeListener implements Listener {
     @EventHandler
     public void onFoodLevelChange(FoodLevelChangeEvent event) {
         if (plugin.getConfig().getBoolean("no-food-regen")) {
-            if (event.getEntity() instanceof Player player) {
+            if (event.getEntity() instanceof Player) {
+                Player player = (Player) event.getEntity();
+
                 event.setCancelled(true);
 
                 NoRegenAndHungerPlugin.setFullStats(player);
