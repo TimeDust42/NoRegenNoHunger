@@ -9,5 +9,5 @@ commands:
 
 permissions:
   noregenandhungerplugin.reload:
-    description: "Позволяет перезагружать конфиг плагина"
+    description: "Allows reloading the plugin config"
     default: op
