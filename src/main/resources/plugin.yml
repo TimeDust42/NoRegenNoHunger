@@ -6,10 +6,11 @@ api-version: '1.16'
 commands:
   noregennohunger:
     description: "Reload plugin config"
-  createworld:
-    description: "Creating test world"
 
 permissions:
   noregennohunger.reload:
     description: "Allows reloading the plugin config"
+    default: op
+  noregennohunger.worlds:
+    description: "Allows changing world settings"
     default: op

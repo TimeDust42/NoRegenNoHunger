@@ -41,7 +41,7 @@ public final class NoRegenNoHunger extends JavaPlugin {
 
         // Commands
         Objects.requireNonNull(getCommand("noregennohunger")).setExecutor(new PluginCommand(this, worldsGUI));
-        Objects.requireNonNull(getCommand("createworld")).setExecutor(new CreateWorldCommand());
+        // Objects.requireNonNull(getCommand("createworld")).setExecutor(new CreateWorldCommand());
 
         // Tasks
         // Bukkit.getScheduler().runTaskTimer(this, new ActionBarTask(), 20L, 20L);
