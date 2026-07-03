@@ -26,7 +26,7 @@ public class WorldsGUI {
 
     public void openWorldList(Player player) {
         CustomMenuHolder holder = new CustomMenuHolder();
-        Inventory gui = Bukkit.createInventory(holder, 27, "§0Выбор мира");
+        Inventory gui = Bukkit.createInventory(holder, 27, "§Select world");
 
         for (WorldData data : worldManager.getAllWorldData()) {
             String displayName = ChatColor.GREEN + data.getWorldName();
@@ -50,9 +50,9 @@ public class WorldsGUI {
 
     public List<String> createLore(WorldData data) {
         return Arrays.asList(
-                ChatColor.GRAY + "Настройки:",
-                data.isHungerEnabled() ? "§7Голод: §aВключён §e[ЛКМ]" : "§7Голод: §cВыключён §e[ЛКМ]",
-                data.isRegenEnabled()  ? "§7Регенерация: §aВключена §e[ПКМ]" : "§7Регенерация: §cВыключена §e[ПКМ]"
+                ChatColor.GRAY + "Settings:",
+                data.isHungerEnabled() ? "§Hunger: §aEnabled §e[LMB]" : "§7Hunger: §cDisabled §e[LMB]",
+                data.isRegenEnabled()  ? "§7Regeneration: §aEnabled §e[RMB]" : "§7Regeneration: §cDisabled §e[RMB]"
         );
     }
 

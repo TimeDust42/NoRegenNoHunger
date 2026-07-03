@@ -51,6 +51,7 @@ public class PluginCommand implements CommandExecutor, TabCompleter {
             }
             Player player = (Player) sender;
             gui.openWorldList(player);
+            return true;
         }
 
         sender.sendMessage(ChatColor.RED + "Usage: /noregennohunger reload");
