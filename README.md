@@ -1,4 +1,4 @@
-# NoRegenAndHungerPlugin
+# NoRegenNoHunger
 
 > 🇷🇺 [Русский](#русский) | 🇬🇧 [English](#english)
 
@@ -11,10 +11,9 @@ A lightweight Spigot plugin that disables natural health regeneration and/or foo
 ### Features
 
 - **Disable natural regeneration** — sets the `naturalRegeneration` gamerule to `false` on all worlds (including dynamically loaded ones)
-- **Disable hunger** — keeps players at full food level and saturation at all times, preventing any hunger-based actions
+- **Disable hunger** — keeps players at full food level at all times, preventing any hunger-based actions
 - **Per-world support** — automatically applies settings to newly loaded worlds
 - **Hot reload** — reload config without restarting the server via a command
-- **Configurable logging** — toggle log messages about regen rule changes
 
 ### Requirements
 
@@ -26,35 +25,43 @@ A lightweight Spigot plugin that disables natural health regeneration and/or foo
 1. Download the `.jar` file from [Releases](../../releases)
 2. Place it in your server's `plugins/` folder
 3. Start or restart the server
-4. Edit `plugins/NoRegenAndHungerPlugin/config.yml` as needed
-5. Use `/noregenandhungerplugin reload` to apply changes without restart
+4. Edit `plugins/NoRegenAndHungerPlugin/worlds.yml` as needed
+5. Use `/noregenandhungerplugin worlds` to instant changes without restart
+6. Use `/noregenandhungerplugin reload` to apply changes without restart
 
 ### Configuration
 
-`config.yml`:
+`worlds.yml`:
 
 ```yaml
-# Log regen rule changes to the console
-logging: true
-
-# Disable hunger — keeps players at full food and saturation at all times
-no-food-regen: true
-
-# Disable natural health regeneration in all worlds
-no-natural-regen: true
+worlds:
+  # World Name
+  world:
+    # Regeneration in this world
+    regen-enabled: false
+    # Hunger in this world
+    hunger-enabled: false
+  world_the_end:
+    regen-enabled: false
+    hunger-enabled: false
+  world_nether:
+    regen-enabled: false
+    hunger-enabled: false
 ```
 
 ### Commands
 
-| Command | Description | Permission |
-|---|---|---|
-| `/noregenandhungerplugin reload` | Reloads the config | `noregenandhungerplugin.reload` |
+| Command                          | Description            | Permission                      |
+|----------------------------------|------------------------|---------------------------------|
+| `/noregenandhungerplugin reload` | Reloads the config     | `noregenandhungerplugin.reload` |
+| `/noregenandhungerplugin worlds` | Configurate all worlds | `noregenandhungerplugin.worlds` |
 
 ### Permissions
 
-| Permission | Description | Default |
-|---|---|---|
+| Permission                      | Description                        | Default |
+|---------------------------------|------------------------------------|---|
 | `noregenandhungerplugin.reload` | Allows reloading the plugin config | OP |
+| `noregenandhungerplugin.worlds` | Allows changing world settings     | OP |
 
 ---
 

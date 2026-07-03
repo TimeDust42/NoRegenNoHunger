@@ -1,0 +1,10 @@
+worlds:
+  world:
+    regen-enabled: false
+    hunger-enabled: false
+  world_the_end:
+    regen-enabled: false
+    hunger-enabled: false
+  world_nether:
+    regen-enabled: false
+    hunger-enabled: false

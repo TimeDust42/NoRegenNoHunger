@@ -1,8 +1,0 @@
-# Log regen rule changes to the console
-logging: true
-
-# Disable hunger — keeps players at full food and saturation at all times
-no-food-regen: true
-
-# Disable natural health regeneration in all worlds
-no-natural-regen: true

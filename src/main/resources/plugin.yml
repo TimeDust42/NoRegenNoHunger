@@ -1,13 +1,15 @@
-name: NoRegenAndHungerPlugin
+name: NoRegenNoHunger
 version: '1.0'
-main: com.timedust.noRegenAndHungerPlugin.NoRegenAndHungerPlugin
+main: com.timedust.noRegenNoHunger.NoRegenNoHunger
 api-version: '1.16'
 
 commands:
-  noregenandhungerplugin:
+  noregennohunger:
     description: "Reload plugin config"
+  createworld:
+    description: "Creating test world"
 
 permissions:
-  noregenandhungerplugin.reload:
+  noregennohunger.reload:
     description: "Allows reloading the plugin config"
     default: op
